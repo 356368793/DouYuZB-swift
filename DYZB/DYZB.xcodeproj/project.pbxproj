@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D162008E868009E6096 /* CollectionNormalCell.swift */; };
+		313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D172008E868009E6096 /* CollectionNormalCell.xib */; };
+		313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */; };
+		313A0D1D2008F0F6009E6096 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */; };
 		5673F2472007166200F7136E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673F2462007166200F7136E /* AppDelegate.swift */; };
 		5673F24C2007166200F7136E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5673F24A2007166200F7136E /* Main.storyboard */; };
 		5673F24E2007166200F7136E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5673F24D2007166200F7136E /* Assets.xcassets */; };
@@ -28,6 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		313A0D162008E868009E6096 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
+		313A0D172008E868009E6096 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
+		313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
+		313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
 		5673F2432007166200F7136E /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5673F2462007166200F7136E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5673F24B2007166200F7136E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 			children = (
 				5673F27F200766DD00F7136E /* PageTitleView.swift */,
 				56797D9F20084619000F61BA /* PageContentView.swift */,
+				313A0D162008E868009E6096 /* CollectionNormalCell.swift */,
+				313A0D172008E868009E6096 /* CollectionNormalCell.xib */,
+				313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */,
+				313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,10 +343,12 @@
 			files = (
 				5673F2512007166200F7136E /* LaunchScreen.storyboard in Resources */,
 				56797DA82008B832000F61BA /* CollectionHeaderView.xib in Resources */,
+				313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */,
 				5673F24E2007166200F7136E /* Assets.xcassets in Resources */,
 				5673F24C2007166200F7136E /* Main.storyboard in Resources */,
 				5673F26F20073EA700F7136E /* Live.storyboard in Resources */,
 				5673F26D20073E8600F7136E /* Home.storyboard in Resources */,
+				313A0D1D2008F0F6009E6096 /* CollectionPrettyCell.xib in Resources */,
 				5673F27420073EDB00F7136E /* Profile.storyboard in Resources */,
 				5673F27220073EC800F7136E /* Follow.storyboard in Resources */,
 			);
@@ -356,6 +370,8 @@
 				56797DA020084619000F61BA /* PageContentView.swift in Sources */,
 				5673F27E2007594800F7136E /* UIBarButtonItem-Extension.swift in Sources */,
 				5673F2822007689500F7136E /* Common.swift in Sources */,
+				313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */,
+				313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */,
 				5673F2792007529E00F7136E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
