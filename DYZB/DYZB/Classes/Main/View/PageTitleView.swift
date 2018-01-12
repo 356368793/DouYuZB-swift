@@ -26,6 +26,12 @@ class PageTitleView: UIView {
         return scrollView
     }()
     
+    private lazy var scrollLine: UIView = {
+        let scrollLine = UIView()
+        scrollLine.backgroundColor = UIColor.orange
+        return scrollLine
+    }()
+    
     // MARK:- 自定义构造函数
     init(frame: CGRect, titles: [String]) {
         self.titles = titles
@@ -52,6 +58,7 @@ extension PageTitleView {
         setupTitleLabels()
         
         // 3.设置底线和滚动的滑块
+        setupBottomLineAndScrollLine()
     }
     
     fileprivate func setupTitleLabels() {
@@ -81,11 +88,36 @@ extension PageTitleView {
             titleLabels.append(label)
             
             // 5.给Label添加手势
-//            label.isUserInteractionEnabled = true
-//            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(_:)))
-//            label.addGestureRecognizer(tapGes)
+            label.isUserInteractionEnabled = true
+            let tapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLabelClick(_:)))
+            label.addGestureRecognizer(tapGes)
         }
+    }
+    
+    private func setupBottomLineAndScrollLine() {
+        // 1.添加底线
+        let bottomLine = UIView()
+        bottomLine.backgroundColor = UIColor.lightGray
+        let lineH : CGFloat = 0.5
+        bottomLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
+        addSubview(bottomLine)
+        
+        // 2.添加scrollLine
+        // 2.1.获取第一个Label
+        guard let firstLabel = titleLabels.first else { return }
+        firstLabel.textColor = UIColor(r: kSelectColor.0, g: kSelectColor.1, b: kSelectColor.2)
+        
+        // 2.2.设置scrollLine的属性
+        scrollView.addSubview(scrollLine)
+        scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
     }
 }
 
+
+// MARK:- 监听Label的点击
+extension PageTitleView {
+    @objc private func titleLabelClick(_ tapGes: UITapGestureRecognizer) {
+        
+    }
+}
 
