@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
         let titleFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
+        titleView.delegate = self
         return titleView
     }()
     
@@ -30,7 +31,8 @@ class HomeViewController: UIViewController {
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(256)), g: CGFloat(arc4random_uniform(256)), b: CGFloat(arc4random_uniform(256)))
             childVcs.append(vc)
         }
-        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self!)
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
         
         return contentView
     }()
@@ -72,3 +74,22 @@ extension HomeViewController {
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrcodeItem]
     }
 }
+
+// MARK:- 遵守PageTitleViewDelegate协议
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(index)
+    }
+}
+
+// MARK:- 遵守PageContentViewDelegate协议
+extension HomeViewController : PageContentViewDelegate {
+    func pageContentView(_ contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+}
+
+
+
+
+
