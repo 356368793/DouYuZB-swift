@@ -23,6 +23,8 @@
 		56797DA020084619000F61BA /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797D9F20084619000F61BA /* PageContentView.swift */; };
 		56797DA220085793000F61BA /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA120085793000F61BA /* UIColor-Extension.swift */; };
 		56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA32008A7D5000F61BA /* RecommendViewController.swift */; };
+		56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA52008B832000F61BA /* CollectionHeaderView.swift */; };
+		56797DA82008B832000F61BA /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56797DA62008B832000F61BA /* CollectionHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		56797D9F20084619000F61BA /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
 		56797DA120085793000F61BA /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
 		56797DA32008A7D5000F61BA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		56797DA52008B832000F61BA /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		56797DA62008B832000F61BA /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 		5673F25C2007380700F7136E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				56797DA52008B832000F61BA /* CollectionHeaderView.swift */,
+				56797DA62008B832000F61BA /* CollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5673F2512007166200F7136E /* LaunchScreen.storyboard in Resources */,
+				56797DA82008B832000F61BA /* CollectionHeaderView.xib in Resources */,
 				5673F24E2007166200F7136E /* Assets.xcassets in Resources */,
 				5673F24C2007166200F7136E /* Main.storyboard in Resources */,
 				5673F26F20073EA700F7136E /* Live.storyboard in Resources */,
@@ -341,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5673F2472007166200F7136E /* AppDelegate.swift in Sources */,
+				56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */,
 				56797DA220085793000F61BA /* UIColor-Extension.swift in Sources */,
 				56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */,
 				5673F26A20073D7E00F7136E /* MainViewController.swift in Sources */,

@@ -29,9 +29,14 @@ class RecommendViewController: UIViewController {
         
         let collectionView = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collectionView.dataSource = self
+        
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderID)
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderID)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        collectionView.bounces = false
+        collectionView.backgroundColor = UIColor.white
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
     }()
@@ -73,7 +78,7 @@ extension RecommendViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
-        headerView.backgroundColor = UIColor.lightGray
+//        headerView.backgroundColor = UIColor.lightGray
         
         return headerView
     }
