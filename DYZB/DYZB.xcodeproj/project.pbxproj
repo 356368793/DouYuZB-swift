@@ -29,6 +29,7 @@
 		56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA32008A7D5000F61BA /* RecommendViewController.swift */; };
 		56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA52008B832000F61BA /* CollectionHeaderView.swift */; };
 		56797DA82008B832000F61BA /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56797DA62008B832000F61BA /* CollectionHeaderView.xib */; };
+		627AFD789698F2D69B914D02 /* Pods_DYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB464AE8221F6B9672C0F5F0 /* Pods_DYZB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,9 @@
 		56797DA32008A7D5000F61BA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		56797DA52008B832000F61BA /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		56797DA62008B832000F61BA /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		772D1474B1FCA15B311A3A1D /* Pods-DYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.release.xcconfig"; sourceTree = "<group>"; };
+		A2100697C5EEC7128517766B /* Pods-DYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYZB/Pods-DYZB.debug.xcconfig"; sourceTree = "<group>"; };
+		FB464AE8221F6B9672C0F5F0 /* Pods_DYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627AFD789698F2D69B914D02 /* Pods_DYZB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,8 @@
 			children = (
 				5673F2452007166200F7136E /* DYZB */,
 				5673F2442007166200F7136E /* Products */,
+				9D24843825FD2EEACAF4B6DB /* Pods */,
+				58E997DC059FB9E0780C6EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,6 +290,23 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		58E997DC059FB9E0780C6EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB464AE8221F6B9672C0F5F0 /* Pods_DYZB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D24843825FD2EEACAF4B6DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2100697C5EEC7128517766B /* Pods-DYZB.debug.xcconfig */,
+				772D1474B1FCA15B311A3A1D /* Pods-DYZB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,9 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5673F2552007166200F7136E /* Build configuration list for PBXNativeTarget "DYZB" */;
 			buildPhases = (
+				8FA428B60EB8F9A13EEBED04 /* [CP] Check Pods Manifest.lock */,
 				5673F23F2007166200F7136E /* Sources */,
 				5673F2402007166200F7136E /* Frameworks */,
 				5673F2412007166200F7136E /* Resources */,
+				55F5144C61665BAB07B841AE /* [CP] Embed Pods Frameworks */,
+				AB1032EB2DB72443F19818BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -355,6 +382,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55F5144C61665BAB07B841AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DYZB/Pods-DYZB-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYZB/Pods-DYZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FA428B60EB8F9A13EEBED04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DYZB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB1032EB2DB72443F19818BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DYZB/Pods-DYZB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5673F23F2007166200F7136E /* Sources */ = {
@@ -523,6 +606,7 @@
 		};
 		5673F2562007166200F7136E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2100697C5EEC7128517766B /* Pods-DYZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -540,6 +624,7 @@
 		};
 		5673F2572007166200F7136E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 772D1474B1FCA15B311A3A1D /* Pods-DYZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
