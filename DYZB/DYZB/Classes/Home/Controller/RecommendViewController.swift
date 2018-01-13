@@ -31,14 +31,14 @@ class RecommendViewController: UIViewController {
         
         let collectionView = UICollectionView(frame: (self?.view.bounds)!, collectionViewLayout: layout)
         collectionView.dataSource = self
-        
+        collectionView.delegate = self
         collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderID)
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        collectionView.bounces = false
+//        collectionView.bounces = false
         collectionView.backgroundColor = UIColor.white
-        collectionView.showsVerticalScrollIndicator = false
+//        collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
