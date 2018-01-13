@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3107117F200A2477007BD798 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107117E200A2477007BD798 /* NetworkTools.swift */; };
 		313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D162008E868009E6096 /* CollectionNormalCell.swift */; };
 		313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D172008E868009E6096 /* CollectionNormalCell.xib */; };
 		313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3107117E200A2477007BD798 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		313A0D162008E868009E6096 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		313A0D172008E868009E6096 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				5673F27A2007557A00F7136E /* Extension */,
 				5673F2812007689500F7136E /* Common.swift */,
+				3107117E200A2477007BD798 /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				5673F2822007689500F7136E /* Common.swift in Sources */,
 				313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */,
 				313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */,
+				3107117F200A2477007BD798 /* NetworkTools.swift in Sources */,
 				5673F2792007529E00F7136E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
