@@ -48,6 +48,8 @@ class RecommendViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        
+        requestData()
     }
 }
 
@@ -58,6 +60,12 @@ extension RecommendViewController {
     }
 }
 
+extension RecommendViewController {
+    func requestData() {
+//        let vm = RecommendViewModel()
+        RecommendViewModel().requestData()
+    }
+}
 
 extension RecommendViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3107117F200A2477007BD798 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3107117E200A2477007BD798 /* NetworkTools.swift */; };
+		31071181200A39F2007BD798 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31071180200A39F1007BD798 /* RecommendViewModel.swift */; };
+		31071183200A3C22007BD798 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31071182200A3C22007BD798 /* Date-Extension.swift */; };
+		31375B7B200B2F9900B8A952 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31375B7A200B2F9900B8A952 /* AnchorGroup.swift */; };
+		31375B7D200B39D000B8A952 /* AnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31375B7C200B39D000B8A952 /* AnchorModel.swift */; };
 		313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D162008E868009E6096 /* CollectionNormalCell.swift */; };
 		313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D172008E868009E6096 /* CollectionNormalCell.xib */; };
 		313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */; };
@@ -35,6 +39,10 @@
 
 /* Begin PBXFileReference section */
 		3107117E200A2477007BD798 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		31071180200A39F1007BD798 /* RecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendViewModel.swift; path = DYZB/Classes/Tools/RecommendViewModel.swift; sourceTree = SOURCE_ROOT; };
+		31071182200A3C22007BD798 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		31375B7A200B2F9900B8A952 /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorGroup.swift; sourceTree = "<group>"; };
+		31375B7C200B39D000B8A952 /* AnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorModel.swift; sourceTree = "<group>"; };
 		313A0D162008E868009E6096 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionNormalCell.swift; sourceTree = "<group>"; };
 		313A0D172008E868009E6096 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
@@ -76,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31375B79200B2F8700B8A952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31375B7A200B2F9900B8A952 /* AnchorGroup.swift */,
+				31375B7C200B39D000B8A952 /* AnchorModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5673F23A2007166200F7136E = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +177,7 @@
 		5673F25D2007380700F7136E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				31071180200A39F1007BD798 /* RecommendViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,8 +185,8 @@
 		5673F25E2007380700F7136E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				31375B79200B2F8700B8A952 /* Model */,
 				5673F25F2007380700F7136E /* Controller */,
-				5673F2602007380700F7136E /* Model */,
 				5673F2612007380700F7136E /* View */,
 				5673F2622007380700F7136E /* ViewModel */,
 			);
@@ -182,13 +200,6 @@
 				5673F26920073D7E00F7136E /* MainViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5673F2602007380700F7136E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5673F2612007380700F7136E /* View */ = {
@@ -289,6 +300,7 @@
 			children = (
 				5673F27D2007594800F7136E /* UIBarButtonItem-Extension.swift */,
 				56797DA120085793000F61BA /* UIColor-Extension.swift */,
+				31071182200A3C22007BD798 /* Date-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -451,15 +463,19 @@
 				56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */,
 				56797DA220085793000F61BA /* UIColor-Extension.swift in Sources */,
 				56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */,
+				31375B7B200B2F9900B8A952 /* AnchorGroup.swift in Sources */,
 				5673F26A20073D7E00F7136E /* MainViewController.swift in Sources */,
 				5673F280200766DD00F7136E /* PageTitleView.swift in Sources */,
 				56797DA020084619000F61BA /* PageContentView.swift in Sources */,
 				5673F27E2007594800F7136E /* UIBarButtonItem-Extension.swift in Sources */,
+				31071183200A3C22007BD798 /* Date-Extension.swift in Sources */,
 				5673F2822007689500F7136E /* Common.swift in Sources */,
 				313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */,
 				313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */,
 				3107117F200A2477007BD798 /* NetworkTools.swift in Sources */,
 				5673F2792007529E00F7136E /* HomeViewController.swift in Sources */,
+				31071181200A39F2007BD798 /* RecommendViewModel.swift in Sources */,
+				31375B7D200B39D000B8A952 /* AnchorModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
