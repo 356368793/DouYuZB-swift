@@ -16,6 +16,8 @@
 		313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D172008E868009E6096 /* CollectionNormalCell.xib */; };
 		313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */; };
 		313A0D1D2008F0F6009E6096 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */; };
+		5667C2C2200C74ED008051F6 /* CollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667C2C1200C74ED008051F6 /* CollectionViewBaseCell.swift */; };
+		5667C2C4200C77D4008051F6 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667C2C3200C77D4008051F6 /* BaseGameModel.swift */; };
 		5673F2472007166200F7136E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673F2462007166200F7136E /* AppDelegate.swift */; };
 		5673F24C2007166200F7136E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5673F24A2007166200F7136E /* Main.storyboard */; };
 		5673F24E2007166200F7136E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5673F24D2007166200F7136E /* Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		313A0D172008E868009E6096 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		5667C2C1200C74ED008051F6 /* CollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBaseCell.swift; sourceTree = "<group>"; };
+		5667C2C3200C77D4008051F6 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		5673F2432007166200F7136E /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5673F2462007166200F7136E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5673F24B2007166200F7136E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			children = (
 				31375B7A200B2F9900B8A952 /* AnchorGroup.swift */,
 				31375B7C200B39D000B8A952 /* AnchorModel.swift */,
+				5667C2C3200C77D4008051F6 /* BaseGameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				313A0D172008E868009E6096 /* CollectionNormalCell.xib */,
 				313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */,
 				313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */,
+				5667C2C1200C74ED008051F6 /* CollectionViewBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,11 +474,13 @@
 				5673F280200766DD00F7136E /* PageTitleView.swift in Sources */,
 				56797DA020084619000F61BA /* PageContentView.swift in Sources */,
 				5673F27E2007594800F7136E /* UIBarButtonItem-Extension.swift in Sources */,
+				5667C2C2200C74ED008051F6 /* CollectionViewBaseCell.swift in Sources */,
 				31071183200A3C22007BD798 /* Date-Extension.swift in Sources */,
 				5673F2822007689500F7136E /* Common.swift in Sources */,
 				313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */,
 				313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */,
 				3107117F200A2477007BD798 /* NetworkTools.swift in Sources */,
+				5667C2C4200C77D4008051F6 /* BaseGameModel.swift in Sources */,
 				5673F2792007529E00F7136E /* HomeViewController.swift in Sources */,
 				31071181200A39F2007BD798 /* RecommendViewModel.swift in Sources */,
 				31375B7D200B39D000B8A952 /* AnchorModel.swift in Sources */,

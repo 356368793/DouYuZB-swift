@@ -28,24 +28,6 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKI-dQ-gji">
-                        <rect key="frame" x="146" y="5" width="60" height="20"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="60" id="I5M-8W-x9c"/>
-                            <constraint firstAttribute="height" constant="20" id="aYg-nD-VX0"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <state key="normal" title="6666在线">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="3"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小码哥IT教育" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-9E-kcB">
                         <rect key="frame" x="5" y="164" width="201" height="16"/>
                         <constraints>
@@ -66,24 +48,42 @@
                             <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                     </button>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0TI-Lf-Trj">
+                        <rect key="frame" x="143" y="8" width="60" height="20"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="99P-yR-8y7"/>
+                            <constraint firstAttribute="height" constant="20" id="qAK-ur-avX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="666在线">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="8lw-QX-Vj1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="0Dm-ER-qg4"/>
-                <constraint firstAttribute="trailing" secondItem="KKI-dQ-gji" secondAttribute="trailing" constant="5" id="0jg-zI-VQI"/>
                 <constraint firstItem="qFD-du-Rev" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="6HW-HX-nA7"/>
-                <constraint firstItem="KKI-dQ-gji" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="8J0-tD-oh2"/>
                 <constraint firstItem="gnI-9E-kcB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="9do-im-obU"/>
                 <constraint firstItem="8lw-QX-Vj1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CNV-FN-aas"/>
                 <constraint firstItem="gnI-9E-kcB" firstAttribute="top" secondItem="8lw-QX-Vj1" secondAttribute="bottom" constant="5" id="L0q-rv-CuX"/>
                 <constraint firstAttribute="bottom" secondItem="qFD-du-Rev" secondAttribute="bottom" constant="5" id="ND4-DE-7Km"/>
                 <constraint firstItem="qFD-du-Rev" firstAttribute="top" secondItem="gnI-9E-kcB" secondAttribute="bottom" constant="5" id="OgV-1I-gpK"/>
                 <constraint firstAttribute="trailing" secondItem="gnI-9E-kcB" secondAttribute="trailing" constant="5" id="dwV-Ka-hSj"/>
+                <constraint firstItem="0TI-Lf-Trj" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="e9r-Kv-UnA"/>
+                <constraint firstAttribute="trailing" secondItem="0TI-Lf-Trj" secondAttribute="trailing" constant="8" id="gMj-tC-NxY"/>
                 <constraint firstAttribute="trailing" secondItem="8lw-QX-Vj1" secondAttribute="trailing" id="j2p-bx-fTm"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="211" height="204"/>
-            <point key="canvasLocation" x="105.5" y="-25"/>
+            <connections>
+                <outlet property="cityLable" destination="qFD-du-Rev" id="u7b-76-cbn"/>
+                <outlet property="imageView" destination="8lw-QX-Vj1" id="2wt-gD-IpP"/>
+                <outlet property="nameLabel" destination="gnI-9E-kcB" id="OnD-SN-x9Z"/>
+                <outlet property="onlineBtn" destination="0TI-Lf-Trj" id="8lQ-eu-Kan"/>
+            </connections>
+            <point key="canvasLocation" x="-40" y="-7"/>
         </collectionViewCell>
     </objects>
     <resources>

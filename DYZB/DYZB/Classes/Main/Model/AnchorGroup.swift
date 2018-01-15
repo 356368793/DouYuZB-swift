@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AnchorGroup: NSObject {
-    // room_list
+class AnchorGroup: BaseGameModel {
+    /// 该组中对应的房间信息
     @objc var room_list: [[String: NSObject]]? {
         didSet {
             guard let room_list = room_list else { return }
@@ -17,28 +17,8 @@ class AnchorGroup: NSObject {
             }
         }
     }
-    // tag_name
-    @objc var tag_name: String = ""
-    // small_icon_url
-    @objc var small_icon_url = ""
-    // icon_url
-    @objc var icon_url = "home_header_normal"
-    // tag_id
-    @objc var tag_id = ""
-    // push_nearby
-    @objc var push_nearby = ""
-    // push_vertical_screen
-    @objc var push_vertical_screen = ""
-    
-    lazy var anchors: [AnchorModel] = [AnchorModel]()
-    
-    init(dict: [String: Any]) {
-        super.init()
-        
-        setValuesForKeys(dict)
-    }
-    
-    override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        print("AnchorGroup - undefinedKey = \(key)")
-    }
+    /// 组显示的图标
+    @objc var icon_name : String = "home_header_normal"
+    /// 定义主播的模型对象数组
+    lazy var anchors : [AnchorModel] = [AnchorModel]()
 }

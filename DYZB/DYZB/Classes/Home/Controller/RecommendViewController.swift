@@ -20,6 +20,10 @@ private let kHeaderID = "kHeaderID"
 
 class RecommendViewController: UIViewController {
     
+    // MARK:- lazy initialization
+    private lazy var recommendVM: RecommendViewModel = RecommendViewModel()
+    private lazy var dataGroups: [AnchorGroup] = [AnchorGroup]()
+    
     private lazy var collectionView: UICollectionView = { [weak self] in
         // add flowlayout
         let layout = UICollectionViewFlowLayout()
@@ -36,9 +40,7 @@ class RecommendViewController: UIViewController {
         collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
         collectionView.register(UINib(nibName: "CollectionPrettyCell", bundle: nil), forCellWithReuseIdentifier: kPrettyCellID)
         collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-//        collectionView.bounces = false
         collectionView.backgroundColor = UIColor.white
-//        collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         
         return collectionView
@@ -62,36 +64,44 @@ extension RecommendViewController {
 
 extension RecommendViewController {
     func requestData() {
-//        let vm = RecommendViewModel()
-        RecommendViewModel().requestData()
+        recommendVM.requestData {
+            self.dataGroups = self.recommendVM.anchorGroups
+            
+            self.collectionView.reloadData()
+        }
     }
 }
 
 extension RecommendViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return self.dataGroups.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        return self.dataGroups[section].anchors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var item: UICollectionViewCell!
+        let group = self.dataGroups[indexPath.section]
+        let anchor = group.anchors[indexPath.row]
+        
+        var cell: CollectionViewBaseCell!
+        
         if indexPath.section == 1 {
-            item = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
         } else {
-            item = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
         }
         
-        return item
+        cell.anchor = anchor
+        
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderID, for: indexPath) as! CollectionHeaderView
+        
+        headerView.group = self.dataGroups[indexPath.section]
         
         return headerView
     }

@@ -9,23 +9,68 @@ import UIKit
 
 class RecommendViewModel {
     // MARK:- lazy initializaiton
-    private lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
+    private lazy var bigDataGroup : AnchorGroup = AnchorGroup()
+    private lazy var prettyGroup : AnchorGroup = AnchorGroup()
 }
 
 // MARK:- 发送网络请求
 extension RecommendViewModel {
-    func requestData() {
+    func requestData(finishCallBack: @escaping () -> ()) {
         // 0.定义参数
         let parameters = ["limit" : "4", "offset" : "0", "time" : Date.getCurrentTime()]
         
+        let dGroup = DispatchGroup()
+        
         // 1. 请求第一部分推荐数据
+        dGroup.enter()
+        NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getbigDataRoom", parameters: ["time": Date.getCurrentTime()]) { (result) in
+            // 1. result -> dic
+            guard let dic = result as? [String: NSObject] else { return }
+            
+            // 2. dic -> dataArray
+            guard let dataArray = dic["data"] as? [[String: NSObject]] else { return }
+            
+            // 3.遍历字典,并且转成模型对象
+            // 3.1.设置组的属性
+            self.bigDataGroup.tag_name = "热门"
+            self.bigDataGroup.icon_name = "home_header_hot"
+            
+            for dataDic in dataArray {
+                let anchor = AnchorModel(dict: dataDic)
+                self.bigDataGroup.anchors.append(anchor)
+            }
+            
+            // 3.2. 离开组
+            dGroup.leave()
+        }
         
         // 2. 请求第二部分颜值数据
+        dGroup.enter()
         NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getVerticalRoom", parameters: parameters) { (result) in
-            print(result)
+            // 1. result -> dic
+            guard let dic = result as? [String: NSObject] else { return }
+            
+            // 2. dic -> dataArray
+            guard let dataArray = dic["data"] as? [[String: NSObject]] else { return }
+            
+            // 3.遍历字典,并且转成模型对象
+            // 3.1.设置组的属性
+            self.prettyGroup.tag_name = "颜值"
+            self.prettyGroup.icon_name = "home_header_phone"
+            
+            for dataDic in dataArray {
+                 let anchor = AnchorModel(dict: dataDic)
+                self.prettyGroup.anchors.append(anchor)
+            }
+            
+            
+            // 3.2. 离开组
+            dGroup.leave()
         }
         
         // 3. 请求后面部分游戏数据
+        dGroup.enter()
         NetworkTools.requestData(type: .GET, URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) { (response) in
             // 1. response -> dic
             guard let dic = response as? [String: NSObject] else { return }
@@ -39,12 +84,15 @@ extension RecommendViewModel {
                 self.anchorGroups.append(anchorGroup)
             }
             
-//            for group in self.anchorGroups {
-//                for anchor in group.anchors {
-//                    print(anchor.nickname)
-//                }
-//                print("--------")
-//            }
+            // 4. 离开组
+            dGroup.leave()
+        }
+        
+        dGroup.notify(queue: DispatchQueue.main) {
+            self.anchorGroups.insert(self.prettyGroup, at: 0)
+            self.anchorGroups.insert(self.bigDataGroup, at: 0)
+            
+            finishCallBack()
         }
     }
 }

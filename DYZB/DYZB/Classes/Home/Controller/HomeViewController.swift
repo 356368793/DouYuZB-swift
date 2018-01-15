@@ -43,13 +43,6 @@ class HomeViewController: UIViewController {
 
         // setup UI
         setupUI()
-        
-        // MARK:- Alamofire test
-//        let urlString = "https://httpbin.org/get"
-//
-//        NetworkTools.requestData(type: .GET, URLString: urlString) { (response) in
-//            print(response)
-//        }
     }
 }
 
