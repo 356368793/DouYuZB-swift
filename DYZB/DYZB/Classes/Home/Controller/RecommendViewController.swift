@@ -18,7 +18,8 @@ private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
 private let kHeaderID = "kHeaderID"
 
-private let kCycleViewH = kScreenW * 3 / 8
+private let kCycleViewH: CGFloat = kScreenW * 3 / 8
+private let kGameViewH: CGFloat = 90
 
 class RecommendViewController: UIViewController {
     
@@ -49,8 +50,13 @@ class RecommendViewController: UIViewController {
     }()
     private lazy var cycleView: RecommendCycleView = {
         let cycleView = RecommendCycleView.cycleView()
-        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH), width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -(kCycleViewH + kGameViewH), width: kScreenW, height: kCycleViewH)
         return cycleView
+    }()
+    private lazy var gameView: RecommendGameView = {
+        let gameView = RecommendGameView.gameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        return gameView
     }()
 
     override func viewDidLoad() {
@@ -69,9 +75,11 @@ extension RecommendViewController {
         
         // 将CycleView添加到UICollectionView中
         collectionView.addSubview(cycleView)
+        // 将 gameView 添加到 UICollectionView 中
+        collectionView.addSubview(gameView)
         
         // 设置 collectionView 内边距
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH + kGameViewH, left: 0, bottom: 0, right: 0)
     }
 }
 
@@ -79,6 +87,7 @@ extension RecommendViewController {
      func requestData() {
         recommendVM.requestData {
             self.dataGroups = self.recommendVM.anchorGroups
+            self.gameView.groups = self.dataGroups
             
             self.collectionView.reloadData()
         }
