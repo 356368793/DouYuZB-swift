@@ -6,13 +6,12 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYZB" customModuleProvider="target">
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6b-Vx-4bR" customClass="CollectionHeaderView" customModule="DYZB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
@@ -45,19 +44,18 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="4Yc-OC-nwy" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="0By-O0-2Hz"/>
+                <constraint firstItem="4Yc-OC-nwy" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="0By-O0-2Hz"/>
                 <constraint firstItem="lr5-iy-pyc" firstAttribute="centerY" secondItem="jPV-oQ-qBu" secondAttribute="centerY" id="2rd-bj-rlU"/>
                 <constraint firstItem="lr5-iy-pyc" firstAttribute="leading" secondItem="jPV-oQ-qBu" secondAttribute="trailing" constant="1" id="5Cc-sw-9eD"/>
                 <constraint firstItem="jPV-oQ-qBu" firstAttribute="top" secondItem="4Yc-OC-nwy" secondAttribute="bottom" constant="11" id="9eV-3j-gM0"/>
                 <constraint firstItem="4Yc-OC-nwy" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="BhE-5t-UDX"/>
-                <constraint firstItem="jPV-oQ-qBu" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="10" id="Fye-Ci-oN9"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="jPV-oQ-qBu" secondAttribute="bottom" constant="11" id="Jju-FL-29B"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="4Yc-OC-nwy" secondAttribute="trailing" id="eQu-gt-OCa"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="cde-PI-b5i" secondAttribute="bottom" constant="5" id="gAC-nh-DyR"/>
+                <constraint firstItem="jPV-oQ-qBu" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="Fye-Ci-oN9"/>
+                <constraint firstAttribute="bottom" secondItem="jPV-oQ-qBu" secondAttribute="bottom" constant="11" id="Jju-FL-29B"/>
+                <constraint firstAttribute="trailing" secondItem="4Yc-OC-nwy" secondAttribute="trailing" id="eQu-gt-OCa"/>
+                <constraint firstAttribute="bottom" secondItem="cde-PI-b5i" secondAttribute="bottom" constant="5" id="gAC-nh-DyR"/>
                 <constraint firstItem="cde-PI-b5i" firstAttribute="top" secondItem="4Yc-OC-nwy" secondAttribute="bottom" constant="5" id="j3u-D7-Sac"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="cde-PI-b5i" secondAttribute="trailing" constant="10" id="vb2-mY-xur"/>
+                <constraint firstAttribute="trailing" secondItem="cde-PI-b5i" secondAttribute="trailing" constant="10" id="vb2-mY-xur"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
                 <outlet property="iconImageView" destination="jPV-oQ-qBu" id="21G-Wt-eL3"/>
                 <outlet property="iconLabel" destination="lr5-iy-pyc" id="ebE-Sp-xKa"/>

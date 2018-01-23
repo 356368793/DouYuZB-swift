@@ -16,6 +16,10 @@
 		313A0D192008E868009E6096 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D172008E868009E6096 /* CollectionNormalCell.xib */; };
 		313A0D1C2008F0F6009E6096 /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */; };
 		313A0D1D2008F0F6009E6096 /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */; };
+		56430B3B20170B7C007CDD0F /* GameCollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56430B3920170B7C007CDD0F /* GameCollectionGameCell.swift */; };
+		56430B3C20170B7C007CDD0F /* GameCollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56430B3A20170B7C007CDD0F /* GameCollectionGameCell.xib */; };
+		56430B3E20170FD1007CDD0F /* GameCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56430B3D20170FD1007CDD0F /* GameCollectionHeaderView.swift */; };
+		56430B4020170FE1007CDD0F /* GameCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56430B3F20170FE1007CDD0F /* GameCollectionHeaderView.xib */; };
 		5667C2C2200C74ED008051F6 /* CollectionViewBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667C2C1200C74ED008051F6 /* CollectionViewBaseCell.swift */; };
 		5667C2C4200C77D4008051F6 /* BaseGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5667C2C3200C77D4008051F6 /* BaseGameModel.swift */; };
 		5673F2472007166200F7136E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5673F2462007166200F7136E /* AppDelegate.swift */; };
@@ -36,6 +40,9 @@
 		56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA32008A7D5000F61BA /* RecommendViewController.swift */; };
 		56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56797DA52008B832000F61BA /* CollectionHeaderView.swift */; };
 		56797DA82008B832000F61BA /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56797DA62008B832000F61BA /* CollectionHeaderView.xib */; };
+		567A03AB2016DC9B0016FCB1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A03AA2016DC9B0016FCB1 /* GameViewController.swift */; };
+		567A03AD2016E14C0016FCB1 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A03AC2016E14C0016FCB1 /* GameModel.swift */; };
+		567A03AF2016E1EC0016FCB1 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567A03AE2016E1EC0016FCB1 /* GameViewModel.swift */; };
 		567AE6C9200D956E00F706D5 /* RecommendGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567AE6C8200D956E00F706D5 /* RecommendGameView.swift */; };
 		567AE6CB200D957900F706D5 /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567AE6CA200D957900F706D5 /* RecommendGameView.xib */; };
 		567AE6CE200D98F800F706D5 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567AE6CC200D98F800F706D5 /* CollectionGameCell.swift */; };
@@ -58,6 +65,10 @@
 		313A0D172008E868009E6096 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		313A0D1A2008F0F6009E6096 /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		313A0D1B2008F0F6009E6096 /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		56430B3920170B7C007CDD0F /* GameCollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionGameCell.swift; sourceTree = "<group>"; };
+		56430B3A20170B7C007CDD0F /* GameCollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionGameCell.xib; sourceTree = "<group>"; };
+		56430B3D20170FD1007CDD0F /* GameCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionHeaderView.swift; sourceTree = "<group>"; };
+		56430B3F20170FE1007CDD0F /* GameCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameCollectionHeaderView.xib; sourceTree = "<group>"; };
 		5667C2C1200C74ED008051F6 /* CollectionViewBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewBaseCell.swift; sourceTree = "<group>"; };
 		5667C2C3200C77D4008051F6 /* BaseGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameModel.swift; sourceTree = "<group>"; };
 		5673F2432007166200F7136E /* DYZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +91,9 @@
 		56797DA32008A7D5000F61BA /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		56797DA52008B832000F61BA /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 		56797DA62008B832000F61BA /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderView.xib; sourceTree = "<group>"; };
+		567A03AA2016DC9B0016FCB1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		567A03AC2016E14C0016FCB1 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		567A03AE2016E1EC0016FCB1 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		567AE6C8200D956E00F706D5 /* RecommendGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendGameView.swift; sourceTree = "<group>"; };
 		567AE6CA200D957900F706D5 /* RecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
 		567AE6CC200D98F800F706D5 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
@@ -177,6 +191,7 @@
 				5673F26B20073E8600F7136E /* Home.storyboard */,
 				5673F2782007529E00F7136E /* HomeViewController.swift */,
 				56797DA32008A7D5000F61BA /* RecommendViewController.swift */,
+				567A03AA2016DC9B0016FCB1 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				56EEB5B8200C924100E9BC02 /* CycleModel.swift */,
+				567A03AC2016E14C0016FCB1 /* GameModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +218,10 @@
 				567AE6CA200D957900F706D5 /* RecommendGameView.xib */,
 				567AE6CC200D98F800F706D5 /* CollectionGameCell.swift */,
 				567AE6CD200D98F800F706D5 /* CollectionGameCell.xib */,
+				56430B3920170B7C007CDD0F /* GameCollectionGameCell.swift */,
+				56430B3A20170B7C007CDD0F /* GameCollectionGameCell.xib */,
+				56430B3D20170FD1007CDD0F /* GameCollectionHeaderView.swift */,
+				56430B3F20170FE1007CDD0F /* GameCollectionHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				31071180200A39F1007BD798 /* RecommendViewModel.swift */,
+				567A03AE2016E1EC0016FCB1 /* GameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -423,8 +444,10 @@
 				5673F24C2007166200F7136E /* Main.storyboard in Resources */,
 				5673F26F20073EA700F7136E /* Live.storyboard in Resources */,
 				5673F26D20073E8600F7136E /* Home.storyboard in Resources */,
+				56430B4020170FE1007CDD0F /* GameCollectionHeaderView.xib in Resources */,
 				567AE6CF200D98F800F706D5 /* CollectionGameCell.xib in Resources */,
 				56EEB5B7200C85B300E9BC02 /* RecommendCycleView.xib in Resources */,
+				56430B3C20170B7C007CDD0F /* GameCollectionGameCell.xib in Resources */,
 				56EEB5BD200C9DB200E9BC02 /* CollectionCycleCell.xib in Resources */,
 				313A0D1D2008F0F6009E6096 /* CollectionPrettyCell.xib in Resources */,
 				5673F27420073EDB00F7136E /* Profile.storyboard in Resources */,
@@ -499,13 +522,18 @@
 				5673F2472007166200F7136E /* AppDelegate.swift in Sources */,
 				56797DA72008B832000F61BA /* CollectionHeaderView.swift in Sources */,
 				56797DA220085793000F61BA /* UIColor-Extension.swift in Sources */,
+				56430B3B20170B7C007CDD0F /* GameCollectionGameCell.swift in Sources */,
 				56797DA42008A7D5000F61BA /* RecommendViewController.swift in Sources */,
 				567AE6C9200D956E00F706D5 /* RecommendGameView.swift in Sources */,
+				567A03AB2016DC9B0016FCB1 /* GameViewController.swift in Sources */,
 				31375B7B200B2F9900B8A952 /* AnchorGroup.swift in Sources */,
 				5673F26A20073D7E00F7136E /* MainViewController.swift in Sources */,
 				56EEB5B9200C924100E9BC02 /* CycleModel.swift in Sources */,
+				567A03AF2016E1EC0016FCB1 /* GameViewModel.swift in Sources */,
 				5673F280200766DD00F7136E /* PageTitleView.swift in Sources */,
 				56797DA020084619000F61BA /* PageContentView.swift in Sources */,
+				567A03AD2016E14C0016FCB1 /* GameModel.swift in Sources */,
+				56430B3E20170FD1007CDD0F /* GameCollectionHeaderView.swift in Sources */,
 				5673F27E2007594800F7136E /* UIBarButtonItem-Extension.swift in Sources */,
 				5667C2C2200C74ED008051F6 /* CollectionViewBaseCell.swift in Sources */,
 				31071183200A3C22007BD798 /* Date-Extension.swift in Sources */,
