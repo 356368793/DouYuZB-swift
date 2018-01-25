@@ -59,6 +59,7 @@
             <connections>
                 <outlet property="iconImageView" destination="jPV-oQ-qBu" id="21G-Wt-eL3"/>
                 <outlet property="iconLabel" destination="lr5-iy-pyc" id="ebE-Sp-xKa"/>
+                <outlet property="moreBtn" destination="cde-PI-b5i" id="RKG-1o-f8O"/>
             </connections>
             <point key="canvasLocation" x="212" y="69"/>
         </collectionReusableView>

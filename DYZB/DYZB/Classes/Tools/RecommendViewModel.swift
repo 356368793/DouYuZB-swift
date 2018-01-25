@@ -7,9 +7,8 @@
 
 import UIKit
 
-class RecommendViewModel {
+class RecommendViewModel: BaseViewModel {
     // MARK:- lazy initializaiton
-    lazy var anchorGroups: [AnchorGroup] = [AnchorGroup]()
     private lazy var bigDataGroup : AnchorGroup = AnchorGroup()
     private lazy var prettyGroup : AnchorGroup = AnchorGroup()
     lazy var cycleModels: [CycleModel] = [CycleModel]()
