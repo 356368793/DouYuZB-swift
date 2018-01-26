@@ -57,6 +57,8 @@
 		567AE6CB200D957900F706D5 /* RecommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567AE6CA200D957900F706D5 /* RecommendGameView.xib */; };
 		567AE6CE200D98F800F706D5 /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567AE6CC200D98F800F706D5 /* CollectionGameCell.swift */; };
 		567AE6CF200D98F800F706D5 /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 567AE6CD200D98F800F706D5 /* CollectionGameCell.xib */; };
+		56E16F11201B100900FCC08A /* RoomShowViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E16F10201B100900FCC08A /* RoomShowViewController-Extension.swift */; };
+		56E16F13201B113600FCC08A /* UIPanGestureRecognizer-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E16F12201B113600FCC08A /* UIPanGestureRecognizer-Extension.swift */; };
 		56EEB5B5200C85A600E9BC02 /* RecommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEB5B4200C85A600E9BC02 /* RecommendCycleView.swift */; };
 		56EEB5B7200C85B300E9BC02 /* RecommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56EEB5B6200C85B300E9BC02 /* RecommendCycleView.xib */; };
 		56EEB5B9200C924100E9BC02 /* CycleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EEB5B8200C924100E9BC02 /* CycleModel.swift */; };
@@ -118,6 +120,8 @@
 		567AE6CA200D957900F706D5 /* RecommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendGameView.xib; sourceTree = "<group>"; };
 		567AE6CC200D98F800F706D5 /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionGameCell.swift; sourceTree = "<group>"; };
 		567AE6CD200D98F800F706D5 /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionGameCell.xib; sourceTree = "<group>"; };
+		56E16F10201B100900FCC08A /* RoomShowViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RoomShowViewController-Extension.swift"; sourceTree = "<group>"; };
+		56E16F12201B113600FCC08A /* UIPanGestureRecognizer-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIPanGestureRecognizer-Extension.swift"; sourceTree = "<group>"; };
 		56EEB5B4200C85A600E9BC02 /* RecommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCycleView.swift; sourceTree = "<group>"; };
 		56EEB5B6200C85B300E9BC02 /* RecommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCycleView.xib; sourceTree = "<group>"; };
 		56EEB5B8200C924100E9BC02 /* CycleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleModel.swift; sourceTree = "<group>"; };
@@ -385,6 +389,8 @@
 				5673F27D2007594800F7136E /* UIBarButtonItem-Extension.swift */,
 				56797DA120085793000F61BA /* UIColor-Extension.swift */,
 				31071182200A3C22007BD798 /* Date-Extension.swift */,
+				56E16F10201B100900FCC08A /* RoomShowViewController-Extension.swift */,
+				56E16F12201B113600FCC08A /* UIPanGestureRecognizer-Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -497,11 +503,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DYZB/Pods-DYZB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,6 +589,8 @@
 				5672E0902019BB6E00DC2B38 /* RoomNormalViewController.swift in Sources */,
 				313A0D182008E868009E6096 /* CollectionNormalCell.swift in Sources */,
 				3107117F200A2477007BD798 /* NetworkTools.swift in Sources */,
+				56E16F11201B100900FCC08A /* RoomShowViewController-Extension.swift in Sources */,
+				56E16F13201B113600FCC08A /* UIPanGestureRecognizer-Extension.swift in Sources */,
 				567AE6CE200D98F800F706D5 /* CollectionGameCell.swift in Sources */,
 				5667C2C4200C77D4008051F6 /* BaseGameModel.swift in Sources */,
 				56EEB5B5200C85A600E9BC02 /* RecommendCycleView.swift in Sources */,
@@ -742,13 +752,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W5NMGQT6A5;
+				DEVELOPMENT_TEAM = 67LFD376B9;
 				INFOPLIST_FILE = DYZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaochen.DYZB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinktrader.CSMClient.dyzb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -760,13 +772,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W5NMGQT6A5;
+				DEVELOPMENT_TEAM = 67LFD376B9;
 				INFOPLIST_FILE = DYZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaochen.DYZB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thinktrader.CSMClient.dyzb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

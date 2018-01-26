@@ -8,4 +8,6 @@ target 'DYZB' do
 pod 'Alamofire'  #, '~> 4.0.1'
 pod 'Kingfisher' #, '~> 3.1.1'
 
+pod 'Hero', :git => 'https://github.com/lkzhao/Hero.git'
+
 end

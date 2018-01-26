@@ -1,15 +1,27 @@
 PODS:
   - Alamofire (4.6.0)
+  - Hero (1.0.1)
   - Kingfisher (4.6.1)
 
 DEPENDENCIES:
   - Alamofire
+  - Hero (from `https://github.com/lkzhao/Hero.git`)
   - Kingfisher
+
+EXTERNAL SOURCES:
+  Hero:
+    :git: https://github.com/lkzhao/Hero.git
+
+CHECKOUT OPTIONS:
+  Hero:
+    :commit: a8660697e94ceef9069a631fdc3c9e7d95e04a17
+    :git: https://github.com/lkzhao/Hero.git
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Hero: a1a9d96f3174190486984739d7ed5101d39416f1
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
 
-PODFILE CHECKSUM: 382ec92239fba9d13d1b510fea44cb3542dbfa5a
+PODFILE CHECKSUM: 7bbe03b6793591457dc5dfaa20f0a89dd6986d55
 
 COCOAPODS: 1.3.1

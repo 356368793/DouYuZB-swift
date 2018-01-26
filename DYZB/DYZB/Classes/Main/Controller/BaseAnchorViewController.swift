@@ -120,7 +120,8 @@ extension BaseAnchorViewController : UICollectionViewDelegate {
     private func presentShowRoomVc() {
         // 1.创建ShowRoomVc
         let showRoomVc = RoomShowViewController()
-        
+        showRoomVc.isHeroEnabled = true
+        showRoomVc.heroModalAnimationType = .selectBy(presenting: .cover(direction: .up), dismissing: .uncover(direction: .down))
         // 2.以Modal方式弹出
         present(showRoomVc, animated: true, completion: nil)
     }
