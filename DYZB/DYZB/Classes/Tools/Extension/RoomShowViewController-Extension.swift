@@ -29,7 +29,7 @@ extension RoomShowViewController {
         //3.1 Gesture states began to check the pan direction the user initiated
         case .began:
             // MARK:- 滑动
-//            print("began")
+            print("began")
         //3.2 Gesture state changed to Translate the view according to the user pan gesture
         case .changed:
             if(progressBool){
